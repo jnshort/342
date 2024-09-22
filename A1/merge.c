@@ -6,11 +6,16 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <assert.h>
 
 void merge(int *a, int *b, int a_len, int b_len) {
     // Allocate memory for temporary array
     int *temp= (int*)malloc((a_len+b_len)*sizeof(int));
+
+    // Ensure memory has been allocated
+    if (temp == NULL) {
+        printf("Failed to allocate memory.\nExiting..");
+        exit(0);
+    }
 
     // Initialize variables to track indices
     int index_left = 0;
@@ -104,6 +109,23 @@ int main() {
     print_int_list(nums3, 12);
     merge_sort(nums3, 12);
     print_int_list(nums3, 12);
+    printf("\n");
+
+    printf("Test Case 4\n");
+    // Test case, reverse sorted list
+    int nums4[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1};
+    print_int_list(nums4, 11);
+    merge_sort(nums4, 11);
+    print_int_list(nums4, 11);
+    printf("\n");
+
+    printf("Test Case 5\n");
+    // Test case, all duplicate integers
+    int nums5[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    print_int_list(nums5, 15);
+    merge_sort(nums5, 15);
+    print_int_list(nums5, 15);
+    printf("\n");
 
     return 0;
 }
