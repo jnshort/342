@@ -1,9 +1,12 @@
 // CECS 342
 // Assignment 1
 // Group 7
+// Minhlee Lam, Tiffany Lin
+// Kenneth Samaniego, Justin Short
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
 void merge(int *a, int *b, int a_len, int b_len) {
     // Allocate memory for temporary array
@@ -77,7 +80,6 @@ void print_int_list(int *list, int size) {
 }
 
 int main() {
-
     printf("Test Case 1\n");
     // Test case with a list of an even number of integers
     // containing positives, negatives, and zero
