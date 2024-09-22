@@ -1,10 +1,9 @@
-// Short, Justin
 // CECS 342
 // Assignment 1
+// Group 7
 
 #include <stdlib.h>
 #include <stdio.h>
-
 
 void merge(int *a, int *b, int a_len, int b_len) {
     // Allocate memory for temporary array
@@ -41,13 +40,14 @@ void merge(int *a, int *b, int a_len, int b_len) {
             b[i - a_len] = temp[i];
         }
     }
-
     // Free memory used for temp array
     free(temp);
 }
+
+
 void merge_sort(int *a, int n) {
     // Calculate middle of list
-    // (Odd length lists will have extra 
+    // (Odd length lists will have extra
     //  element on right side of split)
     int mid = n/2;
     int size_left = n/2;
