@@ -127,5 +127,13 @@ int main() {
     print_int_list(nums5, 15);
     printf("\n");
 
+    printf("Test Case 6\n");
+    // Test case, empty list
+    int nums6[] = {};
+    print_int_list(nums6, 0);
+    merge_sort(nums6, 0);
+    print_int_list(nums6, 0);
+    printf("\n");
+
     return 0;
 }
