@@ -1,0 +1,12 @@
+1. Windows PowerShell --> cd into directory
+2. stack new <projectName>, cd into new projectName
+3. stack build
+4. code .
+5. run code with "stack run" via terminal
+
+For separate testing in specific file directory
+1. example: stack ghci src/Lib.hs, run "add 1 2" 
+
+For Main.hs testing:
+1. stack ghci
+2. once in ghci terminal, enter "main" to see outputted results.
